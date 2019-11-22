@@ -1,0 +1,48 @@
+<html>
+    <head><title>TUGASSSSS</title>
+        <script language='javascript'>
+            function cek(){
+                var nilai;
+                nilai=document.cform.nilai.value;
+                if(0<nilai && nilai <=20){
+                    document.cform.hasil.value="E";
+                }else if(20<nilai && nilai <=40){
+                    document.cform.hasil.value="D";
+                }else if(40<nilai && nilai <=60){
+                    document.cform.hasil.value="C";
+                }else if(60<nilai && nilai <=80){
+                    document.cform.hasil.value="B";
+                }else if(80<nilai && nilai <=100){
+                    document.cform.hasil.value="A";
+                }else{
+                    document.cform.hasil.value="";
+                    alert('Angka Harus Antara 1-100');
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <center><br><br><br>
+            <h3><b>CEK NILAI</b></h3>
+            <form name='cform'>
+                <table border="0">
+                    <tr>
+                        <td width='35%'>Masukkan Nilai</td>
+                        <td width='5%'>:</td>
+                        <td width='60%'><input type="text" name='nilai' id='nilai'></td>
+                    </tr>
+                    <tr>
+                        <td width='35%'>Hasil</td>
+                        <td width='5%'>:</td>
+                        <td width='60%'><input type="text" name='hasil' id='hasil'></td>
+                    </tr>
+                    <tr>
+                        <td width='35%'></td>
+                        <td width='5%'></td>
+                        <td width='60%'><input type="button" value="cek" onclick="cek();"></td>
+                    </tr>
+                </table>
+            </form>
+        </center>
+    </body>
+</html>

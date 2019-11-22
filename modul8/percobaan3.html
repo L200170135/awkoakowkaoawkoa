@@ -1,0 +1,26 @@
+<html>
+    <head><title>COUNTER</title>
+        <script>
+           function countMax(){
+               var wert,max;
+               max=100;
+               wert=max-(document.forml.question.value.length);
+               if (wert<0){
+                   alert('Maaf, Batas maksimum pengisian adalah '+max+' karakter!');
+                   document.forml.question.value=document.forml.question.value.substring(0, max);
+                   wert=max-(document.forml.question.value.length);
+                   document.forml.rv_counter.value = wert;
+               }else{
+                   document.forml.rv_counter.value=max-(document.forml.question.value.length);
+               }
+           } 
+        </script>
+    </head>
+    <body>
+        <form name='forml' method='POST' action="">
+            <textarea name='question' cols='60' rows='3' id='question' onfocus="countMax()" onclick="countMax()" onchange="countMax()" onkeydown="countMax()" onkeyup="countMax()" wrap="virtual"></textarea>
+            <font face='arial, helvetica, sans-serif, bookman old style, comic sams ms' size='2'>sisa</font>
+            <input name='rv_counter' type="text" size="3" maxlength="3" value="100" readonly>
+        </form>
+    </body>
+</html>
